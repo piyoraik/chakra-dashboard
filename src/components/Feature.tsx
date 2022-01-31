@@ -1,10 +1,11 @@
 import { Flex, Stack, Text } from "@chakra-ui/react";
 import { NextPage } from "next";
+import { ReactNode } from "react";
 
 interface Props {
   title: string;
   text: string;
-  icon: string;
+  icon: ReactNode;
   bgColor: string;
 }
 
