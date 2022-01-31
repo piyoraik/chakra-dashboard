@@ -1,7 +1,17 @@
-import { Flex, Heading, Image, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Image,
+  List,
+  ListIcon,
+  ListItem,
+  Text,
+} from "@chakra-ui/react";
 import { BsNewspaper, BsPlusSquare } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
 import { RiDoorOpenLine, RiMailStarLine } from "react-icons/ri";
+import { MdCheckCircle, MdSettings } from "react-icons/md";
 import { NextPage } from "next";
 
 const SideNav: NextPage = () => {
@@ -23,6 +33,7 @@ const SideNav: NextPage = () => {
           <Flex fontSize="xl" color="gray" align="center">
             <BsPlusSquare />
             <Text ml="3">Add Resume</Text>
+            <Box></Box>
           </Flex>
           <Flex
             h="20vh"
@@ -31,18 +42,34 @@ const SideNav: NextPage = () => {
             align="flex-start"
             justify="space-around"
           >
-            <Flex
-              fontSize="xl"
-              color="gray"
-              align="center"
-              fontWeight="800"
-              backgroundColor="ping.50"
-              p="3"
-              m="-3"
-              rounded="full"
-            >
-              <CgProfile color="ping" />
-              <Text ml="3">My Profile</Text>
+            <Flex direction="column">
+              <Flex
+                fontSize="2xl"
+                color="gray"
+                align="center"
+                fontWeight="800"
+                backgroundColor="ping.50"
+                p="3"
+                m="-3"
+                rounded="full"
+              >
+                <CgProfile color="ping" />
+                <Text ml="3">My Profile</Text>
+              </Flex>
+              <List spacing={3} pl="5" fontSize="xl" mt='3'>
+                <ListItem>
+                  <ListIcon as={MdCheckCircle} color="green.500" />
+                  React
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={MdCheckCircle} color="green.500" />
+                  Vue
+                </ListItem>
+                <ListItem>
+                  <ListIcon as={MdCheckCircle} color="green.500" />
+                  Angular
+                </ListItem>
+              </List>
             </Flex>
 
             <Flex fontSize="xl" color="gray" align="center">
